@@ -1,0 +1,126 @@
+<?php
+
+/* List Language  */
+$lang['language'] = "Language";
+$lang['profile'] = "Profile";
+$lang['change_password'] = "Password";
+$lang['panel_title'] = "Password";
+$lang['old_password'] = "Old Password";
+$lang['new_password'] = "New Password";
+$lang['re_password'] = "Re-Password";
+$lang['logout'] = "Log out";
+$lang['view_more'] = "See All Notifications";
+$lang['la_fs'] = "You have";
+$lang['la_ls'] = "notifications";
+$lang['close'] = "Close";
+$lang['menu_grades'] = "Grades";
+$lang['menu_books_statistics'] = "Books Statistics";
+$lang['menu_member_statistics'] = "Member Statistics";
+
+$lang['Admin'] = "Admin";
+$lang['Student'] = "Students";
+$lang['Parent'] = "Parents";
+$lang['Teacher'] = "Teachers";
+$lang['Accountant'] = "Accountant";
+$lang['Librarian'] = "Librarian";
+$lang['Receptionist'] = "Receptionist";
+
+$lang['success'] = "Success!";
+$lang['cmessage'] = "Your password is change.";
+
+/* Menu List */
+$lang['menu_examoutofsettings'] = 'Out of mark Settings';
+$lang['menu_subjectmarkoutof'] = 'Subject out of mark';
+$lang['menu_add'] = 'Add';
+$lang['menu_edit'] = 'Edit';
+$lang['menu_search'] = 'Search';
+$lang['menu_ranking'] = 'Ranking';
+$lang['menu_edit_term'] ='Term';
+$lang['menu_view'] = 'View';
+$lang['menu_success'] = 'Success';
+$lang['menu_dashboard'] = 'Dashboard';
+$lang['menu_student'] = 'Students';
+$lang['menu_parent'] = 'Parents';
+$lang['menu_teacher'] = 'Teachers';
+$lang['menu_user'] = 'Users';
+$lang['menu_classes'] = 'Classes';
+$lang['menu_section'] = 'Streams';
+$lang['menu_subject'] = 'Subjects';
+$lang['menu_academics'] ="Academics";
+$lang['menu_grade'] = 'Grading';
+$lang['menu_exam'] = 'Add Exam';
+$lang['menu_exams'] = 'Exam Settings';
+$lang['menu_examschedule'] = 'Exam Schedule';
+$lang['menu_student_exam_analysis'] = 'Student Exam Analysis';
+$lang['menu_general_exam_analysis'] = 'General Exam Analysis';
+$lang['menu_library'] = 'Library';
+$lang['menu_mark'] = 'Mark';
+$lang['menu_exam_processing'] = 'Exam Processing';
+$lang['menu_routine'] = 'Routine';
+$lang['menu_attendance'] = 'Attendance';
+$lang['menu_member'] = 'Members';
+$lang['menu_books'] = 'Books';
+$lang['menu_lost_books'] = 'Lost Books';
+$lang['menu_issue'] = 'Issues';
+$lang['menu_fine'] = 'Fine';
+$lang['menu_profile'] = 'Profile';
+$lang['menu_transport'] = 'Transport';
+$lang['menu_hostel'] = 'Hostel';
+$lang['menu_category'] = 'Category';
+$lang['menu_account'] = 'Accounts';
+$lang['menu_feetype'] = 'Vote Heads';
+$lang['menu_setfee'] = 'Set Vote Head';
+$lang['menu_balance'] = 'Balance';
+$lang['menu_paymentsettings'] = 'Payment Settings';
+$lang['menu_expense'] = 'Expense';
+$lang['menu_communications'] ="Communications";
+$lang['menu_notice'] = 'Notice';
+$lang['menu_report'] = 'Report';
+$lang['menu_import'] = 'Import';
+$lang['menu_backup'] = 'Backup';
+$lang['menu_ranking'] = 'Ranking';
+$lang['menu_exams_ranking'] ="Exams Analysis";
+$lang['menu_report_cards'] = 'Report Cards';
+$lang['menu_mark_sheets'] = 'Generate Mark Sheets';
+$lang['menu_visitorinfo'] = 'Visitor Information';
+$lang['menu_systemadmin'] = 'System Admin';
+$lang['menu_reset_password'] = 'Reset Password';
+$lang['menu_setting'] = 'System Settings';
+$lang['menu_term_setting'] = 'Term Settings';
+$lang['menu_transcripts'] = 'Transcripts';
+$lang['menu_add_term'] ='Term';
+$lang['accountant'] = 'Accountant';
+$lang['librarian'] = 'Librarian';
+$lang['upload'] = "Upload";
+$lang['menu_system_settings'] ="Settings";
+$lang['menu_analysis'] ="Analysis";
+$lang['menu_general_statistics'] ="General Statistics";
+$lang['menu_lost_books'] ="Lost Books";
+$lang['menu_lost_and_found_books'] ="Lost and Found";
+$lang['menu_borrowing'] ="Borrowings";
+$lang['menu_library_analysis'] ="Library Analysis";
+
+
+/* Start Update Menu */
+$lang['menu_sattendance'] = 'Student Attendance';
+$lang['menu_tattendance'] = 'Teacher Attendance';
+$lang['menu_eattendance'] = 'Exam Attendance';
+$lang['menu_promotion'] = 'Promotion';
+$lang['menu_media'] = 'Media';
+$lang['menu_leave'] = 'Leave Applications';
+$lang['menu_holiday'] = 'Holidays';
+$lang['menu_event'] = 'Events';
+$lang['menu_submited_application'] = 'Submited Application';
+$lang['menu_my_application'] = 'My Applications';
+$lang['menu_message'] = 'Messaging';
+$lang['menu_smssettings'] = 'SMS Settings';
+$lang['menu_mailandsms'] = 'Mail / SMS';
+$lang['menu_mailandsmstemplate'] = 'Mail / SMS Template';
+$lang['menu_invoice'] = 'Fee Statements';
+$lang['menu_report_forms_settings'] = 'Report Cards Settings';
+$lang['menu_reportforms_settings']="Report Cards Settings";
+$lang['menu_reportforms']="End Term Results";
+$lang['menu_reportforms_print']="Print Report Cards";
+$lang['menu_reportforms_results']="End Term Results";
+$lang['menu_reportforms_title']="Report Cards Filtration";
+/* End Update Menu */

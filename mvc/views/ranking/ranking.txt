@@ -1,0 +1,89 @@
+													$i = 0; 
+                                                    $j = 0; 
+                                                    $ttmark=false;
+													$m = 0; 
+													$n = 0; 
+													$rttmarks=false;
+													$rttmark=false;
+                                                    $sranking=$this->ranking_m->get_students_average($examID,$classesID);
+                                                    foreach($sranking as $student) {
+                                                       if ($classesID !=13 && $classesID !=14) {
+                                                        if ($ttmark != round($student->stotal,0)) {
+                                                            $ttmark=round($student->stotal,0);
+                                                            $i++;
+                                                            if ($j>0) {
+                                                                $i+=$j;
+                                                                $j=0;
+                                                            }
+                                                        }else{
+                                                            $j++;
+                                                        }
+													   }else{
+														   
+														   $rsubjectcount=$this->ranking_m->get_total_subject_count($student->roll,$examID,$classesID);
+                                                            foreach ($rsubjectcount as $rkeyvalue) {
+                                                                if($rkeyvalue->sno ==7){
+																	
+                                                                        $rspoint=$this->ranking_m->get_subjects($student->studentID,$examID,$classesID);
+                                                                            foreach ($rspoint as $rspoint) {
+                                                                                $rscore=round($rspoint->avg,0);
+																				$ttmarks=$rscore;
+                                                                            }
+                                                                    }else if($rkeyvalue->sno<7){
+																			$rspoint=$this->ranking_m->get_subjects($student->studentID,$examID,$classesID);
+																				foreach ($rspoint as $rspoint) {
+																					$rscore=round($rspoint->avg,0);
+																					$ttmarks=$rscore;
+																				}
+                                                                    }else if($rkeyvalue->sno ==8){
+                                                                        $rsciences=$this->ranking_m->sciences_count($student->studentID,$examID,$classesID);
+                                                                        foreach ($rsciences as $rkeyvalues) {
+                                                                            $rsciences_count=$rkeyvalues->total_s;
+                                                                        }
+                                                                        $rhumanities=$this->ranking_m->humanities_count($student->studentID,$examID,$classesID);
+                                                                        foreach ($rhumanities as $rkeyvalueh) {
+                                                                            $rhumanities_count=$rkeyvalueh->total_h;
+                                                                            
+                                                                        }
+                                                                        if ($rsciences_count==2 && $rhumanities_count==2) {
+                                                                            $rhumanities_IDs=$this->ranking_m->humanities_IDS($student->studentID,$examID,$classesID);
+
+                                                                            foreach ($rhumanities_IDs as $rhumanities_IDs) {
+                                                                                $rsubjecth=$rhumanities_IDs->subjectID;
+                                                                                
+
+                                                                            }
+                                                                                $roption1spoint=$this->ranking_m->get_option1_subjects($student->studentID,$examID,$classesID,$rsubjecth);
+                                                                                foreach ($roption1spoint as $roption1spoint) {
+                                                                                    $roption1score=round($roption1spoint->avg,0);
+																					$ttmarks=$roption1score;
+                                                                                }
+                                                                        }else{
+                                                                            $rsciences_IDs=$this->ranking_m->sciences_IDS($student->studentID,$examID,$classesID);
+                                                                                    foreach ($rsciences_IDs as $rsciences_IDs) {
+                                                                                        $rsubject_s=$rsciences_IDs->subjectID;
+                                                                                    }
+                                                                                   $roption2spoint=$this->ranking_m->get_option2_subjects($student->studentID,$examID,$classesID,$rsubject_s);
+                                                                                foreach ($roption2spoint as $roption2spoint) {
+																					
+                                                                                    $roption2score=round($roption2spoint->avg,0);
+																					$ttmarks=$roption2score;
+                                                                                }
+                                                                        }
+                                                                    }
+
+                                                            }
+															//echo $ttmarks;
+															
+															 if ($ttmark != $ttmarks) {
+																	$ttmark=$ttmarks;
+																	$m++;
+																	if ($n>0) {
+																		$m+=$n;
+																		$n=0;
+																	}
+																}else{
+																	$n++;
+																}
+																
+													   }

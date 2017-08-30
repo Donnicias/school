@@ -1,0 +1,86 @@
+@charset 'UTF-8';
+body,html{
+
+}
+@font-face{
+    font-family: adventurer;
+    src:url('./assets/fonts/AdventurerBlackSF.ttf');
+}
+.site-info{
+	font-size:0.75em;
+	color:#3d9970;
+}
+
+input[type='text'],
+input[type='password']{
+	color:#3d9970;
+	border-radius:50px;
+}
+.logo{
+  text-align:left;
+  background-color:#333;
+  color:#ffffff;
+}
+#addon-username-field{
+  background-color: transparent;
+  color:inherit;
+}
+#addon-pass-field{
+  background-color: transparent;
+  color:inherit;
+}
+#addon-reset-pass{
+  background-color: transparent;
+  color:inherit;
+  }
+#login-header{
+	 color:#f9f9f9;
+	 text-transform: capitalize;
+	 font-size: 2em;
+	 font-family: 'Helvetica';
+	 background-color: #3d9970; /*dictated by theme*/
+	 /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+#reset-header{
+	 color:#f9f9f9;
+	 font-family: 'Helvetica';
+	 background-color: #3d9970; /*dictated by theme*/
+}
+#btn-reset-login{
+	 text-decoration:none;
+	 outline:none;
+	 color:#3d9970; /* dictated by theme */
+	 font-size:1.25em;
+	 font-family:'Helvetica';
+}
+#btn-forgot-pass{
+	 text-decoration:underline;
+	 outline:none;
+	 color:inherit;
+	 font-size:1.25em;
+	 font-family:'Helvetica';
+}
+#btn-login{
+	/*changes with new theme*/
+	color: #fff !important;
+	border-radius:50px;
+	font-size: 1.5em;
+	border: 0.5px solid #3d9970;
+	background-color: #3d9970 !important;
+	border-color: #3d9970 !important;
+}
+#btn-login:hover{
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#btn-reset{
+	/*changes with new theme*/
+	color: #fff !important;
+	border-radius:50px;
+	font-size: 1.5em;
+	border: 0.5px solid #3d9970;
+	background-color: #3d9970 !important;
+	border-color: #3d9970 !important;
+}
+#btn-reset:hover{
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
