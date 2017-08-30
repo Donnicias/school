@@ -1,0 +1,2 @@
+Hey I am crafting a text file
+This is a line that is supposed to be written into the file. 
