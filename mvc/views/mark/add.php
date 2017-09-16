@@ -222,7 +222,9 @@
                 </div>
 
                 <script type="text/javascript">
+
                     $("#add_mark").click(function() {
+//
                         var inputs = "";
                         var inputs_value = "";
 
@@ -264,7 +266,7 @@
                         $.ajax({
                             type: 'POST',
                             url: "<?=base_url('mark/mark_send')?>",
-                            data: {"examID" : "<?=$set_exam?>", "classesID" : "<?=$set_classes?>", "subjectID" : "<?=$set_subject?>", "inputs" :inputs,"out_of":out_of,"percentage":percentage},
+                            data: {"term_name" : "<?=$set_tername?>","examID" : "<?=$set_exam?>", "classesID" : "<?=$set_classes?>", "subjectID" : "<?=$set_subject?>", "inputs" :inputs,"out_of":out_of,"percentage":percentage},
                             dataType: "html",
                             success: function(data) {
                                 toastr["success"](data)

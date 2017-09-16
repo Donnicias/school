@@ -395,7 +395,7 @@
 																				"examID"=>$examID,
 																				"classesID"=>$classesID,
 																				"term"=>$student->term,
-																				"year"=>date("Y")
+                                                                                "year"=>$year
 																				);
 																				$check_content=$this->student_averages_m->get_student_average($array1);
 																						if(count($check_content)){
@@ -410,7 +410,7 @@
 																							"roll"=>$student->studentID,
 																							"examID"=>$examID,
 																							"term"=>$student->term,
-																							"year"=>date("Y")
+                                                                                            "year"=>$year
 																							);
 																							if($this->student_averages_m->update_student_average($data, $array)){
 																								//echo "record updated!";
@@ -465,14 +465,14 @@
 																						"subject_entry"=>$keyvalue->sno,
 																						"overall_grade"=>$grade->grade,
 																						"term"=>$student->term,
-																						"year"=>date("Y")
+                                                                                        "year"=>$year
 																						);
 																						$array1= array(
 																						"roll"=>$student->studentID,
 																						"examID"=>$examID,
                                                                                         "classesID"=>$classesID,
 																						"term"=>$student->term,
-																						"year"=>date("Y")
+																						"year"=>$year
 																						);
 																						$check_content=$this->student_averages_m->get_student_average($array1);
 																						if(count($check_content)){
@@ -487,7 +487,7 @@
 																							"roll"=>$student->studentID,
 																							"examID"=>$examID,
 																							"term"=>$student->term,
-																							"year"=>date("Y")
+																							"year"=>$year
 																							);
 																							//print_r($data);
 																							//print_r($array);
@@ -539,14 +539,14 @@
 																						"subject_entry"=>$keyvalue->sno,
 																						"overall_grade"=>$grade->grade,
 																						"term"=>$student->term,
-																						"year"=>date("Y")
+																						"year"=>$year
 																						);
 																						$array1= array(
 																						"roll"=>$student->studentID,
 																						"examID"=>$examID,
                                                                                         "classesID"=>$classesID,
 																						"term"=>$student->term,
-																						"year"=>date("Y")
+																						"year"=>$year
 																						);
 																						
 																						$check_content2=$this->student_averages_m->get_student_average($array1);
@@ -562,10 +562,10 @@
 																							"roll"=>$student->studentID,
 																							"examID"=>$examID,
 																							"term"=>$student->term,
-																							"year"=>date("Y")
+																							"year"=>$year
 																							);
 																							if($this->student_averages_m->update_student_average($data, $array)){
-																								//echo "record updated!";
+																								echo "record updated!";
 																							}else{
 																								echo "error!";
 																							}

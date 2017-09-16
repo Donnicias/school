@@ -134,6 +134,8 @@ class Mark extends Admin_Controller {
 			$this->data['set_section'] = 0;
 			$this->data['set_subject'] = 0;
 			$this->data['set_term'] = 0;
+			$this->data['set_tername']='';
+            $this->data['set_termID'] = 0;
 			$this->data['set_out_of'] = 0;
 			$this->data['years']=$this->reportcards_m->get_years();
 			$classesID = $this->input->post("classesID");
@@ -170,6 +172,8 @@ class Mark extends Admin_Controller {
 					$this->data['set_section'] = $sectionID;
 					$this->data['set_subject'] = $subjectID;
 					$this->data['set_term']=$term_id;
+                    $this->data['set_termID']=$term_id;
+
 					$this->data['set_year'] = $year;
 					$this->data['set_out_of']=$out_of;
 					$this->data['out_of']=$out_of;
@@ -178,7 +182,7 @@ class Mark extends Admin_Controller {
 					$term=$this->term_m->get_active_term(array('term_status' =>1));
 					$termm=$this->reportforms_m->get_term_name($term_id);
 					$term_name=$termm->term_name;
-					
+                    $this->data['set_tername']=$term_name;
 					if (!empty($sectionID)) {
 						$students = $this->student_m->get_order_by_student(array("classesID" => $classesID,"sectionID" => $sectionID));
 					}else{
@@ -223,6 +227,8 @@ class Mark extends Admin_Controller {
 	}
 
 	function mark_send() {
+        echo 'Marks updated...';
+        $term_name = $this->input->post("term_name");
 		$examID = $this->input->post("examID");
 		$classesID = $this->input->post("classesID");
 		$subjectID = $this->input->post("subjectID");
@@ -267,21 +273,21 @@ class Mark extends Admin_Controller {
 			foreach ($ex_array as $key => $mark) {
 				if($key == $student->studentID) {
 					$array = array("mark" => $mark);
-					$this->mark_m->update_mark_classes($array, array("examID" => $examID, "classesID" => $classesID, "subjectID" => $subjectID, "studentID" => $student->studentID));
+					$this->mark_m->update_mark_classes($array, array("term_name" => $term_name,"examID" => $examID, "classesID" => $classesID, "subjectID" => $subjectID, "studentID" => $student->studentID));
 					break;
 				}
 			}
 			foreach ($ex_array_out_of as $key => $outof) {
 				if($key == $student->studentID) {
 					$array = array("out_of" => $outof);
-					$this->mark_m->update_mark_classes($array, array("examID" => $examID, "classesID" => $classesID, "subjectID" => $subjectID, "studentID" => $student->studentID));
+					$this->mark_m->update_mark_classes($array, array("term_name" => $term_name,"examID" => $examID, "classesID" => $classesID, "subjectID" => $subjectID, "studentID" => $student->studentID));
 					break;
 				}
 			}
 			foreach ($ex_array_percentage as $key => $percent) {
 				if($key == $student->studentID) {
 					$array = array("percentage" => $percent);
-					$this->mark_m->update_mark_classes($array, array("examID" => $examID, "classesID" => $classesID, "subjectID" => $subjectID, "studentID" => $student->studentID));
+					$this->mark_m->update_mark_classes($array, array("term_name" => $term_name,"examID" => $examID, "classesID" => $classesID, "subjectID" => $subjectID, "studentID" => $student->studentID));
 					break;
 				}
 			}
